@@ -21,4 +21,5 @@ BucketList.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
+BucketList
 module.exports = { User, Location, BucketList };
