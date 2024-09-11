@@ -11,7 +11,6 @@ BucketList.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
     user_id: {
       type: DataTypes.INTEGER,
       references: {

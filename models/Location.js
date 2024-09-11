@@ -44,4 +44,4 @@ Location.init(
   }
 );
 
-module.exports = Book;
+module.exports = Location;
