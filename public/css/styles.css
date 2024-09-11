@@ -10,15 +10,15 @@ header {
 }
 
 .navbar ul {
-display: flex;
-justify-content: flex-start;
-flex-grow: 0;
-padding-top: 0px;
-padding-bottom: 0px;
-width: 26%;
-list-style-type: none;
-background-color: lightgray;
-border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 26%;
+  list-style-type: none;
+  background-color: lightgray;
+  border-radius: 8px;
 }
 
 .navbar a {
@@ -48,8 +48,6 @@ div {
   text-align: center;
   font-size: 30px;
   border-radius: 12px;
-  margin: .25rem;
-  padding: .25rem;
+  margin: 0.25rem;
+  padding: 0.25rem;
 }
-  
-
