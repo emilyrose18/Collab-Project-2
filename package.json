@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "tw": "tailwindcss -i css/input.css -o css/output.css --watch"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,12 +21,6 @@
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "nodemon": "^3.1.4",
-    "postcss": "^8.4.45",
-    "postcss-cli": "^11.0.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "^3.4.10"
+    "nodemon": "^3.1.4"
   }
 }
