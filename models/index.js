@@ -1,4 +1,3 @@
-
 const User = require('./User');
 const Location = require('./Location');
 const BucketList = require('./BucketList');
