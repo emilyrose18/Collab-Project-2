@@ -1,0 +1,55 @@
+header {
+  text-align: center;
+  background-color: black;
+  color: red;
+  font-weight: 700;
+  font-size: 48px;
+  margin: 16px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
+  border-radius: 8px;
+}
+
+.navbar ul {
+display: flex;
+justify-content: flex-start;
+flex-grow: 0;
+padding-top: 0px;
+padding-bottom: 0px;
+width: 26%;
+list-style-type: none;
+background-color: lightgray;
+border-radius: 8px;
+}
+
+.navbar a {
+  color: red;
+  text-decoration: none;
+  padding: 4px 4px 4px 4px;
+  margin: 4px 4px 4px 4px;
+  display: block;
+  text-align: start;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  background-color: red;
+  color: lightgray;
+  border-radius: 8px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+div {
+  color: red;
+  background-color: lightgray;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 12px;
+  margin: .25rem;
+  padding: .25rem;
+}
+  
+
