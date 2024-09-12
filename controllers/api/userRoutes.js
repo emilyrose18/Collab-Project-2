@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.get('login', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -30,7 +30,7 @@ router.get('login', async (req, res) => {
       
     //   res.json({ user: userData, message: 'You are now logged in!' });
     // });
-  res.render('login', {
+  res.render('homepage', {
      });
 
   } catch (err) {
