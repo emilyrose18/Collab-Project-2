@@ -20,12 +20,8 @@ Location.init(
       allowNull: false,
     },
     due_date: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING,
       allowNull: false,
-    },
-    visited: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
     },
     user_id: {
       type: DataTypes.INTEGER,

@@ -1,61 +1,28 @@
-// if (typeof window !== "undefined") {
-// const formEl = document.getElementById('form');
-// const buttonEl = document.getElementById("button")
-// let bucketlistEl = document.getElementById("savedBucketlists");
-
-// const handleFormSubmit = function (event) {
-//   event.preventDefault();
-
-//   const locationEl = document.getElementById('location').value.trim();
-//   const descriptionEl = document.getElementById('description').value.trim();
-//   const dueDateEl = document.getElementById('dueDate').value.trim();
+const submitButton = document.querySelector('#button')
+const addLocation = async (event) => {
+    event.preventDefault();
+    console.log("helloooooo");
   
-//   if (!locationEl || !descriptionEl || !dueDateEl) {
-//       const errorEl = document.getElementById('error');
-//       errorEl.textContent = 'Please complete the form.';
-      
-//     return;
-//     };
-    
-//     let formData = {
-//         location: locationEl,
-//         description: descriptionEl,
-//         dueDate: dueDateEl,
-//     };
-    
-//     bucketlistEl.innerHTML="";
-//     formData = document.createElement("div");
-//     bucketlistEl.appendChild(formData);
-    
-//     buttonEl.addEventListener('submit', handleFormSubmit)}};
-    
-
-    
-    
-    
-    
-    
-    const bucketlist = document.getElementById("savedBucketlist");
-    function createList(location, description, dueDate) {
-        
-        const list = document.createElement('h1');
-        
-        const listLocation = document.createElement('div');
-        listLocation.textContent = location;
-    
-        const listDescription = document.createElement('p');
-        listDescription.textContent = description;
-    
-        const listDuedate = document.createElement('h2');
-        listDuedate.textContent = dueDate;
-        
-        list.appendChild(listLocation);
-        list.appendChild(listDescription);
-        list.appendChild(listDuedate);
-    
-        return list;
-}
-
-// Example usage
-const list1 = createList('HEELLOOOOO');
-bucketlist.appendChild(list1);
+    const location_name = document.querySelector('#location').value.trim();
+    const description = document.querySelector('#description').value.trim();
+    const due_date = document.querySelector('#due-date').value.trim();
+  
+    if (location_name && description && due_date) {
+      const response = await fetch('/api/bucketlist', {
+        method: 'POST',
+        body: JSON.stringify({ location_name, description, due_date }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        console.log('yay');
+      } else {
+        alert('Failed to sign up.');
+      }
+    }
+    else {
+        alert('You need to fill the form out');
+    }
+  };
+  
+    submitButton.addEventListener('click', addLocation);
