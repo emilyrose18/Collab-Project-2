@@ -1,51 +1,30 @@
+const loginButton = document.querySelector('#loginButton')
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    const email = document.getElementById('#email-login').value.trim();
-    const password = document.getElementById('#password-login').value.trim();
+    console.log("hello");
+   
+
+    const username = document.querySelector('#loginUsername').value.trim();
+    const password = document.querySelector('#loginPassword').value.trim();
   
-    if (email && password) {
-      const response = await fetch('/api/users/login', {
+    if (username && password) {
+      const response = await fetch('/signup', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to log in.');
+        alert('Failed to login.');
       }
+    }
+    else {
+        alert('You need to fill the form out');
     }
   };
   
-  const signupFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const username = document.getElementById('#username-signup').value.trim();
-    const email = document.getElementById('#email-signup').value.trim();
-    const password = document.getElementById('#password-signup').value.trim();
-  
-    if (username && email && password) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ username, email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to sign up.');
-      }
-    }
-  };
-  
-  document
-    .getElementById('.login-form')
-    .addEventListener('submit', loginFormHandler);
-  
-  document
-    .getElementById('.signup-form')
-    .addEventListener('submit', signupFormHandler);
-  
+  loginButton.addEventListener('click', loginFormHandler);
