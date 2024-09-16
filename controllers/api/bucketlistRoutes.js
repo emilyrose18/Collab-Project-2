@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Location  } = require('../../models');
 
 router.post('/', async (req, res) => {
-    console.log("tomator", req.body);
     try {
       const locationData = await Location.create({
         location_name: req.body.location_name,

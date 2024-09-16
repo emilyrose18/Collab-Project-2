@@ -13,8 +13,7 @@ router.post('/', async (req, res) => {
     //   return;
     // }
 
-    // Verify the posted password with the password store in the database
-    // const validPassword = await userData.checkPassword(req.body.password);
+    //const validPassword = await userData.checkPassword(req.body.password);
 
     // if (!validPassword) {
     //   res
