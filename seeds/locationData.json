@@ -1,0 +1,20 @@
+[
+  {
+    "location": "Dubai",
+    "description": "blah",
+    "due_date": "10/17/2024",
+    "user_id": 1
+  },
+  {
+    "location": "Mexico",
+    "description": "blah",
+    "due_date": "10/20/2024",
+    "user_id": "2"
+  },
+  {
+    "location": "Europe",
+    "description": "awesome",
+    "due_date": "11/11/2024",
+    "user_id": "3"
+  }
+]
