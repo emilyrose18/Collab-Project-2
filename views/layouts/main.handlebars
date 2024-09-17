@@ -7,16 +7,19 @@
     <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
     <title>Bucket List</title>
   </head>
-  <header>BUCKETLIST</header>
+  <header><a href="/">Bucketlist</a></header>
   <nav class="navbar">
     <ul>
-      <li><a href="">Login</a></li>
-      <li><a href="">Home</a></li>
+      <li><a href="/signup">Signup</a></li>
+      {{#if loggedIn}}
       <li><a href="">Logout</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      {{/if}}
     </ul>
   </nav>
   {{{body}}}
-<script src="../../js/addBucketlist.js"></script>
-<script src="../../js/signup.js"></script>
-<script src="../../js/login.js"></script>
+ {{!-- {{#if loggedIn}}
+      <script src='/js/logout.js'></script>
+    {{/if}} --}}
 </html>

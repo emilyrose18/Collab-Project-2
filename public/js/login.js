@@ -5,21 +5,21 @@ const loginFormHandler = async (event) => {
   
     console.log("hello");
    
-
     const username = document.querySelector('#loginUsername').value.trim();
     const password = document.querySelector('#loginPassword').value.trim();
   
     if (username && password) {
-      const response = await fetch('/signup', {
+      const response = await fetch('/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
+        alert("You are now logged in!")
         document.location.replace('/');
       } else {
-        alert('Failed to login.');
+        alert('Failed to login');
       }
     }
     else {
@@ -27,4 +27,5 @@ const loginFormHandler = async (event) => {
     }
   };
   
-  loginButton.addEventListener('click', loginFormHandler);
+  loginButton.addEventListener('click', loginFormHandler)
+  document.querySelector('#login-form');

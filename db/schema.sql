@@ -1,8 +1,8 @@
-\c postgres
-DROP DATABASE IF EXISTS travel_bucket_list;
-CREATE DATABASE travel_bucket_list;
+\c postgres;
+DROP DATABASE IF EXISTS bucketlist;
+CREATE DATABASE bucketlist;
 
-\c travel_bucket_list
+\c bucketlist;
 
 CREATE TABLE "user" (
     id SERIAL PRIMARY KEY,
@@ -13,7 +13,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE location ( 
     id SERIAL PRIMARY KEY, 
-    location_name VARCHAR(255) NOT NULL, 
+    location VARCHAR(255) NOT NULL, 
     description VARCHAR(255) NOT NULL, 
     due_date VARCHAR(255) NOT NULL, 
     user_id INTEGER, 

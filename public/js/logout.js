@@ -1,10 +1,11 @@
 const logout = async () => {
-    const response = await fetch('/api/users/logout', {
+    const response = await fetch('/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
   
     if (response.ok) {
+      alert("You are now logged out")
       document.location.replace('/');
     } else {
       alert('Failed to log out.');
@@ -12,4 +13,3 @@ const logout = async () => {
   };
   
   document.getElementById('#logout').addEventListener('click', logout);
-  

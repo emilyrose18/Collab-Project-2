@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const bucketlistRoutes = require('./bucketlistRoutes');
+const locationRoutes = require('./locationRoutes');
 const userRoutes = require('./userRoutes');
 
-router.use('/bucketlist', bucketlistRoutes);
-router.use('/users', userRoutes);
+router.use('/location', locationRoutes);
+router.use('/user', userRoutes);
 
 module.exports = router;

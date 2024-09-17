@@ -1,9 +1,7 @@
 <main>
-  <h1 id="savedBucketlists">Saved Bucketlists
-    
-  </h1>
+  <h1 id="savedBucketlists">Saved Bucketlists</h1>
   <h1>Bucketlist Form
-    <form class="form-bucketlist">
+    <form id="bucketlist-form">
       <label for="location">Location:</label>
        <input id="location" type="text" />
 
@@ -15,7 +13,9 @@
       
       <button class="button" id="button" type="submit">Submit</button>
         
-        <p id="error">&nbsp;</p>
+        {{!-- <p id="error">&nbsp;</p> --}}
     </form> 
   </h1>
 </main>
+
+<script src="../../js/addBucketlist.js"></script>

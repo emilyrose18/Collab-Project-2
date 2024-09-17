@@ -1,23 +1,24 @@
 const submitButton = document.querySelector('#button')
 const addLocation = async (event) => {
     event.preventDefault();
-    console.log("helloooooo");
+    
+    console.log("hello");
   
-    const location_name = document.querySelector('#location').value.trim();
+    const location = document.querySelector('#location').value.trim();
     const description = document.querySelector('#description').value.trim();
     const due_date = document.querySelector('#due-date').value.trim();
   
-    if (location_name && description && due_date) {
-      const response = await fetch('/api/bucketlist', {
+    if (location && description && due_date) {
+      const response = await fetch('/api/location', {
         method: 'POST',
-        body: JSON.stringify({ location_name, description, due_date }),
+        body: JSON.stringify({ location, description, due_date }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        console.log('yay');
+        alert('Bucketlist added!');
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to add bucketlist.');
       }
     }
     else {
@@ -25,4 +26,5 @@ const addLocation = async (event) => {
     }
   };
   
-    submitButton.addEventListener('click', addLocation);
+submitButton.addEventListener('click', addLocation)
+document.querySelector('#bucketlist-form');

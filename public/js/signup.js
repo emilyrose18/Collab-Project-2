@@ -5,8 +5,8 @@ const signupFormHandler = async (event) => {
   
     console.log("hello");
    
-    const email = document.querySelector('#email').value.trim();
     const username = document.querySelector('#username').value.trim();
+    const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
   
     if (username && email && password) {
@@ -19,7 +19,7 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to sign up');
       }
     }
     else {
@@ -27,5 +27,5 @@ const signupFormHandler = async (event) => {
     }
   };
   
- 
-  signupSubmitButton.addEventListener('click', signupFormHandler);
+signupSubmitButton.addEventListener('click', signupFormHandler)
+document.querySelector('#signup-form');
