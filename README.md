@@ -39,9 +39,5 @@ Below are the deployed application link and the github
 https://collab-project-2.onrender.com/signup
 https://github.com/emilyrose18/Collab-Project-2
 
-**Screenshots**
-Below are the images of the deployed Travel bucket List app and the Github repo
-![alt text](<images/render app.jpg>)
-![alt text](images/githubrepo.jpg)
 
 We hope you enjoy using the Travel Bucket List application! If you have any questions or feedback, feel free to reach out. Happy travels! 🌍✈️
